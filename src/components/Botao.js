@@ -13,19 +13,28 @@ const styles = StyleSheet.create({
         boderColor: '#888' 
     },
     botaoTriplo: {
-        width: Dimensions.get('window').width / 4 * 3.999,
+        width: Dimensions.get('window').width / 4 * 3.699,
         justifyContent: 'center',
         backgroundColor: 'crimson',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        color: 'white',
+        left: 0,
+        borderRadius: 30,
+        top: -50
     },
     botaoDuplo: {
         width: Dimensions.get('window').width / 4 * 1.999,
         borderRadius: 40,
-        width: '195px',
-        height: '135px',
+        width: '187px',
+        height: '125px',
         justifyContent: 'space-between',
         alignItems: 'flex-end',
-        backgroundColor: '#241826'
+        backgroundColor: '#432847ff',
+        left: 0,
+        top: -20,
+        color: '#929292ff',
+        margin: 5
+
     },
     botaoOperacao: {
         backgroundColor: '#6996e8',

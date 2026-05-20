@@ -10,14 +10,24 @@ export default props => {
 
 const styles = StyleSheet.create({
     visor: {
-        flex: 1,
         padding: 10,
         justifyContent: 'center',
         backgroundColor: '#0d2042ff',
-        alignItems: 'flex-end'
+        alignItems: 'center',
+        width: '100%',
+        maxWidth: '400px',
+        maxHeight: '200px',
+        height: '100%',
+        left: 15,
+        top: 150,
+        borderRadius: 30
+        
+
     },
     valorVisor: {
         fontSize: 60,
         color: '#fff'
-    }
+    },
+
+    
 })

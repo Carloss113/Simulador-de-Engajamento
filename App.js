@@ -10,7 +10,7 @@ export default function App(){
         </View>
 
       <View style={styles.botoes}>
-        <Botao label='CE' triplo/>
+        <Botao label='AC' triplo/>
         
 
         <Botao label='7' duplo/>
@@ -29,13 +29,16 @@ export default function App(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1c0651ff'
+    backgroundColor: '#390651ff'
   },
   botoes:{
       flexDirection: 'row',
-      flexWrap: 'wrap'
+      flexWrap: 'wrap',
+      justifyContent: 'space-evenly'
+     
   },
   visor: {
     flex: 1,
+    justifyContent: 'flex-start'
   }
 })
