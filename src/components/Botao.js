@@ -1,6 +1,20 @@
 import {TouchableHighlight, Text, StyleSheet, Dimensions} from
 'react-native'
 
+export default function Botao(props) {
+    const estiloBotao = [styles.botao]
+    if (props.triplo) estiloBotao.push(styles.botaoTriplo)
+    if (props.duplo) estiloBotao.push(styles.botaoDuplo)
+    if (props.operacao) estiloBotao.push(styles.botaoOperacao)
+    if (props.cor) estiloBotao.push({ backgroundColor: props.cor })
+
+    return (
+        <TouchableHighlight>
+            <Text style={estiloBotao}>{props.label}</Text>
+        </TouchableHighlight>
+    )
+}
+
 const styles = StyleSheet.create({
     botao: {
         fontSize:40,
@@ -20,21 +34,16 @@ const styles = StyleSheet.create({
         color: 'white',
         left: 0,
         borderRadius: 30,
-        top: -50
+        
     },
-    botaoDuplo: {
-        width: Dimensions.get('window').width / 4 * 1.999,
-        borderRadius: 40,
-        width: '187px',
-        height: '125px',
-        justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        backgroundColor: '#432847ff',
-        left: 0,
-        top: -20,
-        color: '#929292ff',
-        margin: 5
-
+ botaoDuplo: {
+    borderRadius: 20,
+    width: Dimensions.get('window').width / 3 - 20,
+    height: Dimensions.get('window').width / 3 - 20,  // igual à largura = quadrado
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#432847ff',
+    margin: 5,
     },
     botaoOperacao: {
         backgroundColor: '#6996e8',
