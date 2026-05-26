@@ -39,15 +39,15 @@ export default function App() {
           <Botao label='AC' triplo />
 
 
-          <Botao label='👍 1+ Curtida'  duplo />
+          <Botao label='👍                       1+ Curtidas' duplo />
 
-          <Botao label='💬 Curtida' duplo />
-          <Botao label='✈️' duplo />
+          <Botao label='💬                        2+ Curtidas' duplo />
+          <Botao label='✈️                        5+ Curtidas' duplo />
 
 
-          <Botao label='🚀' duplo />
-          <Botao label='👤' duplo />
-          <Botao label='🔥' duplo />
+          <Botao label='🚀                        2x Curtidas' duplo />
+          <Botao label='👤                        1+ seguidor' duplo />
+          <Botao label='🔥 10+Curtidas 3+seguidores' duplo />
         </View>
 
       </SafeAreaView>

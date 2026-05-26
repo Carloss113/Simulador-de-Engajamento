@@ -45,9 +45,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#432847ff',
     margin: 5,
     top: 10,
-    fontSize: 23,
-   color: '#fff',
-   
+    fontSize: 24,
+    color: '#fff',
+    flexDirection: 'column',
+    flexWrap: 'wrap'
   
     },
     botaoOperacao: {
