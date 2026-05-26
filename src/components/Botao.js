@@ -36,31 +36,26 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         
     },
- botaoDuplo: {
+    botaoDuplo: {
     borderRadius: 20,
-    width: Dimensions.get('window').width / 3 - 20,
+    width: Dimensions.get('window').width / 2 - 20,
     height: Dimensions.get('window').width / 3 - 20,  // igual à largura = quadrado
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#432847ff',
     margin: 5,
+    top: 10,
+    fontSize: 23,
+   color: '#fff',
+   
+  
     },
     botaoOperacao: {
         backgroundColor: '#6996e8',
         color: 'white'
-    }
+    },
+
+    label: {
+    color: '#fff'
+  }
 })
-
-export default function Botao(props){
-
-    const estiloBotao = [styles.botao]
-    if (props.triplo) estiloBotao.push(styles.botaoTriplo)
-    if (props.duplo) estiloBotao.push(styles.botaoDuplo)
-    if (props.operacao) estiloBotao.push(styles.botaoOperacao)
-    return(
-        <TouchableHighlight>
-            <Text style={estiloBotao}>{props.label}</Text>
-        </TouchableHighlight>
-    )
-}
-

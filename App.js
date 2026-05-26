@@ -1,4 +1,7 @@
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Botao from './src/components/Botao'
 import Visor from './src/components/Visor'
 import { useFonts, Orbitron_700Bold } from '@expo-google-fonts/orbitron';
@@ -17,34 +20,38 @@ export default function App() {
   if (!fontsLoaded) return <View style={{ flex: 1, backgroundColor: '#390651ff' }} />;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaProvider>
 
-      <FakeStatusBar />
+      <SafeAreaView style={styles.container}>
 
-      <Text style={styles.titulo}>
-        <Text style={{ color: '#ffffff', fontSize: 26 }}>SIMULADOR DE{'\n'}</Text>
-        <Text style={{ color: '#cc44ff', fontSize: 36 }}>ENGAJAMENTO</Text>
-      </Text>
+        <FakeStatusBar />
 
-      <View style={styles.visor}>
-        <Visor curtidas={128} seguidores={34} />
-      </View>
+        <Text style={styles.titulo}>
+          <Text style={{ color: '#ffffff', fontSize: 26 }}>SIMULADOR DE{'\n'}</Text>
+          <Text style={{ color: '#cc44ff', fontSize: 36 }}>ENGAJAMENTO</Text>
+        </Text>
 
-      <View style={styles.botoes}>
-        <Botao label='AC' triplo />
+        <View style={styles.visor}>
+          <Visor curtidas={128} seguidores={34} />
+        </View>
 
-
-        <Botao label='👍' duplo />
-        <Botao label='8' duplo />
-        <Botao label='9' duplo />
+        <View style={styles.botoes}>
+          <Botao label='AC' triplo />
 
 
-        <Botao label='4' duplo />
-        <Botao label='5' duplo />
-        <Botao label='6' duplo />
-      </View>
+          <Botao label='👍 1+ Curtida'  duplo />
 
-    </SafeAreaView>
+          <Botao label='💬 Curtida' duplo />
+          <Botao label='✈️' duplo />
+
+
+          <Botao label='🚀' duplo />
+          <Botao label='👤' duplo />
+          <Botao label='🔥' duplo />
+        </View>
+
+      </SafeAreaView>
+    </SafeAreaProvider>
   )
 }
 
@@ -54,13 +61,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#390651ff'
   },
-  botoes:{
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'space-evenly'
+  botoes: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly'
   },
   visor: {
-   
+
     justifyContent: 'flex-start'
   },
   titulo: {
@@ -84,4 +91,9 @@ const styles = StyleSheet.create({
     fontSize: 21,
     fontWeight: '600',
   },
+
+    label: {
+    color: '#fff'
+  }
+  
 })
